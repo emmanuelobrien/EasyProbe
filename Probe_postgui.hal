@@ -1,7 +1,7 @@
 # Probe_postgui.hal for [easy]probe
 # Author: Hausen 8
 # Version: 1.2
-# Last Edited: 23-04-03
+# Last Edited: 24-05-22
 
 
 
@@ -101,14 +101,6 @@ net   probe_offset             pyvcp.probe_offset           =>
 
 
 
-# ---------- Enable control for calibration button ----------
-# checkbox bit needs to be inverted to disable the button in unchecked state
-
-net   active_check             pyvcp.act_calib              =>    not_act_cal.in
-net   invert_check             pyvcp.probe_calib.disable    <=    not_act_cal.out
-
-
-
 # ---------- Switching backslash values ----------
 
 net   x-backlash               motion.analog-out-00         =>    ini.0.backlash
@@ -132,6 +124,35 @@ setp  pyvcp.blank_5.disable    1
 setp  pyvcp.blank_6.disable    1
 
 
+
+# ---------- Disable midpoint, rotation and distance buttons ----------
+
+setp lut_midpoint.function     0x2023C
+setp lut_rotation.function     0x2023C
+setp lut_distance.function     0x2023C
+
+net  machine_is_on             halui.machine.is-on          =>    not_is_on.in
+net  reset_buttons             not_is_on.out                =>    lut_midpoint.in-4 lut_rotation.in-4 lut_distance.in-4
+
+net  button_midpoint           pyvcp.midpoint               =>    lut_rotation.in-1 lut_distance.in-1
+net  button_rotation           pyvcp.rotation               =>    lut_midpoint.in-1 lut_distance.in-2
+net  button_distance           pyvcp.distance               =>    lut_midpoint.in-2 lut_rotation.in-2
+
+net  toggle_midpoint           lut_midpoint.out             =>    toggle_midpoint.in
+net  toggle_rotation           lut_rotation.out             =>    toggle_rotation.in
+net  toggle_distance           lut_distance.out             =>    toggle_distance.in
+
+net  no_midpoint               toggle_midpoint.out          =>    pyvcp.midpoint.disable lut_midpoint.in-0
+net  no_rotation               toggle_rotation.out          =>    pyvcp.rotation.disable lut_rotation.in-0
+net  no_distance               toggle_distance.out          =>    pyvcp.distance.disable lut_distance.in-0
+
+
+
+# ---------- Enable control for calibration button ----------
+# checkbox bit needs to be inverted to disable the button in unchecked state
+
+net   active_check             pyvcp.act_calib              =>    not_act_cal.in
+net   invert_check             pyvcp.probe_calib.disable    <=    not_act_cal.out
 
 
 

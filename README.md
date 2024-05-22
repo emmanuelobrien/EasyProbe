@@ -173,4 +173,3 @@ T99 P99 D2 ;
             in high state after the program started. Added a spindle inhibit function while a probe tool is selected with M6. 
             Some minor changes in macros. Read changelog file in macro folder for more information.
 - **v1.0**: Initial release
-
