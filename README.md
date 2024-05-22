@@ -19,7 +19,7 @@ Probe_postgui.hal
 Probe_preload.hal
 ```
 
-Open a terminal, create a fonts folder (if not already present), copy easyicons.ttf to this folder and rebuild the fonts cache:
+Open a terminal, create a fonts folder (if not already present), copy easyicons.ttf to this folder and rebuild the fonts cache. If your config folder has a different name, change it accordingly in the command below:
 
 ```
 mkdir -p ~/.local/share/fonts
