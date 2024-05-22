@@ -19,11 +19,18 @@ Probe_postgui.hal
 Probe_preload.hal
 ```
 
-Right click easyicons.ttf, choose "Open with font viewer" and click on "Install" to install the font. Open a terminal and 
-enter the following command to rebuild your fonts cache:
+Open a terminal, create a fonts folder (if not already present), copy easyicons.ttf to the fonts folder and rebuild the fonts cache:
 
 ```
+mkdir -p ~/.local/share/fonts
+cp ~/linuxcnc/configs/EasyProbe/easyicons.ttf ~/.local/share/fonts/
 fc-cache -f -v
+```
+
+If you want to make sure, that easyicons is properly listed in your fonts pool, use the following command:
+
+```
+fc-list | grep "easyicons"
 ```
 
 ### 2) Edit your INI
