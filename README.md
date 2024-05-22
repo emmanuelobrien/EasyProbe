@@ -19,7 +19,7 @@ Probe_postgui.hal
 Probe_preload.hal
 ```
 
-Open a terminal, create a fonts folder (if not already present), copy easyicons.ttf to the fonts folder and rebuild the fonts cache:
+Open a terminal, create a fonts folder (if not already present), copy easyicons.ttf to this folder and rebuild the fonts cache:
 
 ```
 mkdir -p ~/.local/share/fonts
@@ -27,7 +27,7 @@ cp ~/linuxcnc/configs/EasyProbe/easyicons.ttf ~/.local/share/fonts/
 fc-cache -f -v
 ```
 
-If you want to make sure, that easyicons is properly listed in your fonts pool, use the following command:
+If you want to make sure, that easyicons.ttf is properly installed, use the following command:
 
 ```
 fc-list | grep "easyicons"
