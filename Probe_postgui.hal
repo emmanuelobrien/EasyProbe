@@ -129,6 +129,7 @@ setp  pyvcp.blank_6.disable    1
 # ---------- Disable midpoint, rotation and distance buttons ----------
 # near watches a range from 1 to 9 of each operation
 # lut disables a button when either machine-is-on = false or any other operation button is pressed
+# probe-state will get its value from macros and thus may not be connected to any other source
 
 setp near_midpoint.difference  4
 setp near_rotation.difference  4
@@ -138,7 +139,7 @@ setp near_midpoint.in1         15
 setp near_rotation.in1         25
 setp near_distance.in1         35
 
-   
+
 net  probe-state               near_midpoint.in2            <=
 net  probe-state               near_rotation.in2            <=
 net  probe-state               near_distance.in2            <=
@@ -164,7 +165,5 @@ net  no-distance               lut_distance.out             =>    pyvcp.probe_di
 
 net   active-check             pyvcp.act_calib              =>    not_act_cal.in
 net   invert-check             pyvcp.probe_calib.disable    <=    not_act_cal.out
-
-
 
 

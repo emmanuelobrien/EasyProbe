@@ -93,8 +93,11 @@ MDI_COMMAND = O <probe_x_plus>      CALL
 MDI_COMMAND = O <probe_x_minus>     CALL
 MDI_COMMAND = O <probe_y_plus>      CALL
 MDI_COMMAND = O <probe_y_minus>     CALL
-MDI_COMMAND = O <probe_z_minus>     CALL	
-MDI_COMMAND = O <probe_pocket>      CALL	
+MDI_COMMAND = O <probe_z_minus>     CALL
+MDI_COMMAND = O <probe_pocket>      CALL
+MDI_COMMAND = O <probe_midpoint>    CALL
+MDI_COMMAND = O <probe_rotation>    CALL
+MDI_COMMAND = O <probe_distance>    CALL
 MDI_COMMAND = O <probe_calibration> CALL
 ```
 
@@ -146,10 +149,8 @@ Open your Probe_postgui.hal or the postgui hal file where you added the content 
 lines:
 
 ```
-net   probe_raw       dbounce_probe.in      <=    #PHYSICAL_PROBE_PIN
-net   probe_signal    dbounce_probe.out     =>
-net   probe_signal    motion.probe-input    <=
-net   probe-signal    pyvcp.probe_led       <=
+net   probe-raw       dbounce_probe.in      <=    #PHYSICAL_PROBE_PIN
+net   probe-signal    dbounce_probe.out     =>    motion.probe-input pyvcp.probe_led
 ```
 
 #PHYSICAL_PROBE_PIN must be exchanged to the physical pin of your interface card where your probe tool is connected to. In 
