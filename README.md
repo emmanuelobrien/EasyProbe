@@ -19,11 +19,11 @@ Probe_postgui.hal
 Probe_preload.hal
 ```
 
-Open a terminal, create a fonts folder (if not already present), copy easyicons.ttf to this folder and rebuild the fonts cache. If your config folder has a different name, change it accordingly in the command below:
+Open a terminal, create a fonts folder (if not already present), copy easyicons.ttf to this folder and rebuild the fonts cache. Change CONFIG_NAME to whatever your configuration folder is named:
 
 ```
 mkdir -p ~/.local/share/fonts
-cp ~/linuxcnc/configs/EasyProbe/easyicons.ttf ~/.local/share/fonts/
+cp ~/linuxcnc/configs/CONFIG_NAME/easyicons.ttf ~/.local/share/fonts/
 fc-cache -f -v
 ```
 
