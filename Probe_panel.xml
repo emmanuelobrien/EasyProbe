@@ -1,7 +1,7 @@
 <!-- Probe_panel.xml for [easy]probe -->
 <!-- Author: Hausen 8 -->
 <!-- Version: 1.2 -->
-<!-- Last Edited: 24-05-22 -->
+<!-- Last Edited: 24-05-27 -->
 
 
 
@@ -50,39 +50,44 @@
             <label text="Press Enter to apply new Values!" width="24" pady="6" />
             <label font="('', 10)" text=" " />
             <hbox>
-                <button font="('easyicons', 25)" text="A" padx="2" pady="2" halpin="blank_1" relief="flat" disable_pin="true" />
-                <button font="('easyicons', 25)" text="B" padx="2" pady="2" halpin="probe_y" />
-                <button font="('easyicons', 25)" text="A" padx="2" pady="2" halpin="blank_2" relief="flat" disable_pin="true" />
-                <button font="('easyicons', 25)" text="A" padx="2" pady="2" halpin="blank_3" relief="flat" disable_pin="true" />
-                <button font="('easyicons', 25)" text="E" padx="2" pady="2" halpin="midpoint" disable_pin="true" />
+                <button font="('easyicons', 24)" text="A" padx="2" pady="2" halpin="blank_1" relief="flat" disable_pin="true" />
+                <button font="('easyicons', 24)" text="B" padx="2" pady="2" halpin="probe_y" />
+                <button font="('easyicons', 24)" text="A" padx="2" pady="2" halpin="blank_2" relief="flat" disable_pin="true" />
+                <button font="('easyicons', 24)" text="A" padx="2" pady="2" halpin="blank_3" relief="flat" disable_pin="true" />
+                <button font="('easyicons', 24)" text="E" padx="2" pady="2" halpin="probe_midpoint" disable_pin="true" />
             </hbox>
             <hbox>
-                <button font="('easyicons', 25)" text="F" padx="2" pady="2" halpin="probe_minus_x" />
-                <button font="('easyicons', 25)" text="G" padx="2" pady="2" halpin="probe_hole" />
-                <button font="('easyicons', 25)" text="H" padx="2" pady="2" halpin="probe_x" />
-                <button font="('easyicons', 25)" text="A" padx="2" pady="2" halpin="blank_4" relief="flat" disable_pin="true" />
-                <button font="('easyicons', 25)" text="J" padx="2" pady="2" halpin="rotation" disable_pin="true" />
+                <button font="('easyicons', 24)" text="F" padx="2" pady="2" halpin="probe_minus_x" />
+                <button font="('easyicons', 24)" text="G" padx="2" pady="2" halpin="probe_pocket" />
+                <button font="('easyicons', 24)" text="H" padx="2" pady="2" halpin="probe_x" />
+                <button font="('easyicons', 24)" text="A" padx="2" pady="2" halpin="blank_4" relief="flat" disable_pin="true" />
+                <button font="('easyicons', 24)" text="J" padx="2" pady="2" halpin="probe_rotation" disable_pin="true" />
             </hbox>
             <hbox>
-                <button font="('easyicons', 25)" text="A" padx="2" pady="2" halpin="blank_5" relief="flat" disable_pin="true" />
-                <button font="('easyicons', 25)" text="L" padx="2" pady="2" halpin="probe_minus_y" />
-                <button font="('easyicons', 25)" text="A" padx="2" pady="2" halpin="blank_6" relief="flat" disable_pin="true" />
-                <button font="('easyicons', 25)" text="N" padx="2" pady="2" halpin="probe_minus_z" />
-                <button font="('easyicons', 25)" text="O" padx="2" pady="2" halpin="distance" disable_pin="true" />
+                <button font="('easyicons', 24)" text="A" padx="2" pady="2" halpin="blank_5" relief="flat" disable_pin="true" />
+                <button font="('easyicons', 24)" text="L" padx="2" pady="2" halpin="probe_minus_y" />
+                <button font="('easyicons', 24)" text="A" padx="2" pady="2" halpin="blank_6" relief="flat" disable_pin="true" />
+                <button font="('easyicons', 24)" text="N" padx="2" pady="2" halpin="probe_minus_z" />
+                <button font="('easyicons', 24)" text="O" padx="2" pady="2" halpin="probe_distance" disable_pin="true" />
             </hbox>
-            <label font="('', 13)" text=" " />
+            <label font="('', 9)" text=" " />
             <hbox>
                 <button font="('easyicons', 8)" text="0" padx="2" halpin="p0x0" />
                 <button font="('easyicons', 8)" text="1" padx="2" halpin="p0y0" />
                 <button font="('easyicons', 8)" text="2" padx="2" halpin="p0z0" />
                 <button font="('easyicons', 8)" text="3" padx="2" halpin="p0r0" />
+                <button font="('easyicons', 9)" text="4" padx="6" halpin="escape" bg="#ff3000" />
             </hbox>
             <label font="('', 13)" text=" " />
             <hbox>
-                <checkbutton text="Activate " width="9" halpin="act_calib" />
-                <button text="Calibration" halpin="probe_calib" disable_pin="true" />
+                <checkbutton text="Auto reload G-Code / clear Plot" halpin="reload" initval="1" />
             </hbox>
             <label font="('', 11)" text=" " />
+            <hbox>
+                <checkbutton text="Activate" width="7" halpin="act_calib" />
+                <button text="Calibration" halpin="probe_calib" disable_pin="true" />
+            </hbox>
+            <label font="('', 13)" text=" " />
             <hbox>
                 <label text="Probe Signal" width="12" />
                 <rectled width="25" height="25" on_color="#ff3000" off_color="#80b000" halpin="probe_led" />
