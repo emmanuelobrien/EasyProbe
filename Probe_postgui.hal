@@ -1,7 +1,7 @@
 # Probe_postgui.hal for [easy]probe
 # Author: Hausen 8
 # Version: 1.2
-# Last Edited: 24-05-27
+# Last Edited: 24-05-30
 
 
 
@@ -27,24 +27,27 @@ net   pyvcp-g59.1              pyvcp.g591                   =>    halui.mdi-comm
 net   pyvcp-g59.2              pyvcp.g592                   =>    halui.mdi-command-07
 net   pyvcp-g59.3              pyvcp.g593                   =>    halui.mdi-command-08
 
-net   pyvcp-p0x0               pyvcp.p0x0                   =>    halui.mdi-command-09
-net   pyvcp-p0y0               pyvcp.p0y0                   =>    halui.mdi-command-10
-net   pyvcp-p0z0               pyvcp.p0z0                   =>    halui.mdi-command-11
+net   pyvcp-tool1              pyvcp.tool1                  =>    halui.mdi-command-09
+net   pyvcp-tool2              pyvcp.tool2                  =>    halui.mdi-command-10
+net   pyvcp-tool3              pyvcp.tool3                  =>    halui.mdi-command-11
 
-net   pyvcp-tool1              pyvcp.tool1                  =>    halui.mdi-command-12
-net   pyvcp-tool2              pyvcp.tool2                  =>    halui.mdi-command-13
-net   pyvcp-tool3              pyvcp.tool3                  =>    halui.mdi-command-14
+net   pyvcp-probe-x            pyvcp.probe_x                =>    halui.mdi-command-12
+net   pyvcp-probe-minus-x      pyvcp.probe_minus_x          =>    halui.mdi-command-13
+net   pyvcp-probe-y            pyvcp.probe_y                =>    halui.mdi-command-14
+net   pyvcp-probe-minus-y      pyvcp.probe_minus_y          =>    halui.mdi-command-15
+net   pyvcp-probe-minus-z      pyvcp.probe_minus_z          =>    halui.mdi-command-16
+net   pyvcp-probe-pocket       pyvcp.probe_pocket           =>    halui.mdi-command-17
+net   pyvcp-probe-midpoint     pyvcp.probe_midpoint         =>    halui.mdi-command-18
+net   pyvcp-probe-rotation     pyvcp.probe_rotation         =>    halui.mdi-command-19
+net   pyvcp-probe-distance     pyvcp.probe_distance         =>    halui.mdi-command-20
 
-net   pyvcp-probe-x            pyvcp.probe_x                =>    halui.mdi-command-15
-net   pyvcp-probe-minus-x      pyvcp.probe_minus_x          =>    halui.mdi-command-16
-net   pyvcp-probe-y            pyvcp.probe_y                =>    halui.mdi-command-17
-net   pyvcp-probe-minus-y      pyvcp.probe_minus_y          =>    halui.mdi-command-18
-net   pyvcp-probe-minus-z      pyvcp.probe_minus_z          =>    halui.mdi-command-19
-net   pyvcp-probe-pocket       pyvcp.probe_pocket           =>    halui.mdi-command-20
-net   pyvcp-probe-midpoint     pyvcp.probe_midpoint         =>    halui.mdi-command-21
-net   pyvcp-probe-rotation     pyvcp.probe_rotation         =>    halui.mdi-command-22
-net   pyvcp-probe-distance     pyvcp.probe_distance         =>    halui.mdi-command-23
-net   pyvcp-probe-calibration  pyvcp.probe_calib            =>    halui.mdi-command-24
+net   pyvcp-p0x0               pyvcp.p0x0                   =>    halui.mdi-command-21
+net   pyvcp-p0y0               pyvcp.p0y0                   =>    halui.mdi-command-22
+net   pyvcp-p0z0               pyvcp.p0z0                   =>    halui.mdi-command-23
+net   pyvcp-p0r0               pyvcp.p0r0                   =>    halui.mdi-command-24
+net   pyvcp-escape             pyvcp.escape                 =>    halui.abort
+
+net   pyvcp-probe-calibration  pyvcp.probe_calib            =>    halui.mdi-command-25
 
 
 
@@ -129,7 +132,6 @@ setp  pyvcp.blank_6.disable    1
 # ---------- Disable midpoint, rotation and distance buttons ----------
 # near watches a range from 1 to 9 of each operation
 # lut disables a button when either machine-is-on = false or any other operation button is pressed
-# probe-state will get its value from macros and thus may not be connected to any other source
 
 setp near_midpoint.difference  4
 setp near_rotation.difference  4
@@ -165,5 +167,7 @@ net  no-distance               lut_distance.out             =>    pyvcp.probe_di
 
 net   active-check             pyvcp.act_calib              =>    not_act_cal.in
 net   invert-check             pyvcp.probe_calib.disable    <=    not_act_cal.out
+
+
 
 
