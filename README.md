@@ -129,7 +129,8 @@ MAX_Z_DISTANCE = 2
 # Distance the probe will move back after fast probe. Recommended values between 0.5 and 2 mm.
 Z_CLEARANCE = 0.5
 
-# Fast probe velocity. Be aware to not set it too high, otherwise you will not have enough time in case of a malefunction. Recommended values between 50 and 500 mm per min.
+# Fast probe velocity. Recommended values between 50 and 500 mm per min.
+# Comment: All defined velocity values will be checked. Considered values are: MAX_ACCELERATION (x,y and z), DEBOUNCE_TIME and MAX_XY/Z_DISTANCE. 
 VEL_FAST = 200
 
 # Slow probe velocity. This value is important for the overall accuracy. Recommended values between 10 and 50 mm per min.
@@ -138,11 +139,8 @@ VEL_SLOW = 20
 # Fast forward velocity in between pocket probe movements without actual probing.
 VEL_FF = 2000
 
-# Additional probetrips will lead to a better calibration. Values between 0 and 5.
+# Additional probetrips will lead to a better calibration. Values between 0 and 3 are recommended.
 ADD_PROBETRIPS = 2
-
-# For development, debug messages can be turned on
-DEV_MSG = 0
 
 # Time delay in ms for debouncing probe switch. Try to keep the value as low as possible. Recommended values between 2 and 20 ms.
 DEBOUNCE_TIME = 10
@@ -173,7 +171,7 @@ T99 P99 D2 ;
 
 ### HISTORY
 
-- **v2.0**: Major update with new probe functions (width/midpoint, rotation and measuring)
+- **v2.0**: Major update with new probe functions (midpoint, rotation and measuring)
 - **v1.2**: Added function to calculate backslash independently from INI values
 - **v1.1**: Removed function to disable all buttons when a program is running due to a problem with pushed buttons remaining 
             in high state after the program started. Added a spindle inhibit function while a probe tool is selected with M6. 
