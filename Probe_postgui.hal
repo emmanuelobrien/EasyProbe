@@ -105,13 +105,6 @@ net   probe-offset             pyvcp.probe_offset           =>
 
 
 
-# ---------- Switching backslash values ----------
-
-net   x-backlash               motion.analog-out-00         =>    ini.0.backlash
-net   y-backlash               motion.analog-out-01         =>    ini.1.backlash
-
-
-
 # ---------- Set machine Units ----------
 setp  pyvcp.units_1.legend1    0
 setp  pyvcp.units_2.legend1    0
