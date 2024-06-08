@@ -13,11 +13,16 @@ The "manuals" folder is optional and not required to run the panel:
 ```
 /macros
 /manuals
-/nc_files
 easyicons.ttf
 Probe_panel.xml
 Probe_postgui.hal
 Probe_preload.hal
+```
+
+Copy /nc_files/M130 into your nc_files folder and open a terminal to make the file executable with the following command:
+
+```
+chmod +x ~/linuxcnc/nc_files/M130
 ```
 
 Open a terminal, create a fonts folder (if not already present), copy easyicons.ttf to this folder and rebuild the fonts cache. Change CONFIG_NAME to whatever your configuration folder is named:
