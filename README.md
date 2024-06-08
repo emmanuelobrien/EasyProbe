@@ -13,6 +13,7 @@ The "manuals" folder is optional and not required to run the panel:
 ```
 /macros
 /manuals
+/nc_files
 easyicons.ttf
 Probe_panel.xml
 Probe_postgui.hal
