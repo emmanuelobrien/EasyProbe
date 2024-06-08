@@ -19,7 +19,7 @@ Probe_postgui.hal
 Probe_preload.hal
 ```
 
-Copy /nc_files/M130 into your nc_files folder and open a terminal to make the file executable with the following command:
+Copy /nc_files/M130 to your nc_files folder and open a terminal to make the file executable with the following command:
 
 ```
 chmod +x ~/linuxcnc/nc_files/M130
