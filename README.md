@@ -108,6 +108,7 @@ MDI_COMMAND = O <probe_manual_set>  CALL [0]
 MDI_COMMAND = O <probe_manual_set>  CALL [1]
 MDI_COMMAND = O <probe_manual_set>  CALL [2]
 MDI_COMMAND = O <probe_manual_set>  CALL [3]
+MDI_COMMAND = O <probe_escape> CALL
 
 MDI_COMMAND = O <probe_calibration> CALL
 ```
