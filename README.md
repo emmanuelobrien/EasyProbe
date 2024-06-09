@@ -151,6 +151,10 @@ ADD_PROBETRIPS = 2
 
 # Time delay in ms for debouncing probe switch. Try to keep the value as low as possible. Recommended values between 2 and 20 ms.
 DEBOUNCE_TIME = 10
+
+# Configure the switch of your probe tool. 0 = NO (normally open), 1 = NC (normally closed)
+# Note: The probe signal LED must turn from green to red when you touch the probe tip
+PROBE_SWITCH = 0
 ```
 
 ### 3) Edit your POSTGUI HAL
