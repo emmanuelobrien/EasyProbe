@@ -11,7 +11,7 @@
 setp  dbounce_probe.delay      [PROBE]DEBOUNCE_TIME
 setp  xor_probe.in0            [PROBE]PROBE_SWITCH
 
-net   probe-raw                dbounce_probe.in             <=    pyvcp.probe_signal
+net   probe-raw                dbounce_probe.in             <=    #PHYSICAL_PROBE_PIN
 net   probe-switch             dbounce_probe.out            =>    xor_probe.in1
 net   probe-signal             xor_probe.out                =>    motion.probe-input pyvcp.probe_led
 
