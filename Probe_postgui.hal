@@ -45,6 +45,7 @@ net   pyvcp-p0x0               pyvcp.p0x0                   =>    halui.mdi-comm
 net   pyvcp-p0y0               pyvcp.p0y0                   =>    halui.mdi-command-22
 net   pyvcp-p0z0               pyvcp.p0z0                   =>    halui.mdi-command-23
 net   pyvcp-p0r0               pyvcp.p0r0                   =>    halui.mdi-command-24
+net   pyvcp-escape                                          =>    halui.abort
 net   pyvcp-escape             pyvcp.escape                 =>    halui.mdi-command-25
 
 net   pyvcp-probe-calibration  pyvcp.probe_calib            =>    halui.mdi-command-26
