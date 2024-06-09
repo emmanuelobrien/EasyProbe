@@ -1,7 +1,7 @@
 # Probe_postgui.hal for [easy]probe
 # Author: Hausen 8
 # Version: 1.2
-# Last Edited: 24-05-30
+# Last Edited: 24-06-09
 
 
 
@@ -9,9 +9,11 @@
 # dbounce_probe.in must be linked to the probe tool input of the interface card
 
 setp  dbounce_probe.delay      [PROBE]DEBOUNCE_TIME
+setp  xor_probe.in0            [PROBE]PROBE_SWITCH
 
-net   probe-raw                dbounce_probe.in             <=    #PHYSICAL_PROBE_PIN
-net   probe-signal             dbounce_probe.out            =>    motion.probe-input pyvcp.probe_led
+net   probe-raw                dbounce_probe.in             <=    pyvcp.probe_signal
+net   probe-switch             dbounce_probe.out            =>    xor_probe.in1
+net   probe-signal             xor_probe.out                =>    motion.probe-input pyvcp.probe_led
 
 
 
@@ -135,7 +137,6 @@ setp near_midpoint.in1         15
 setp near_rotation.in1         25
 setp near_distance.in1         35
 
-
 net  probe-state               near_midpoint.in2            <=
 net  probe-state               near_rotation.in2            <=
 net  probe-state               near_distance.in2            <=
@@ -161,7 +162,5 @@ net  no-distance               lut_distance.out             =>    pyvcp.probe_di
 
 net   active-check             pyvcp.act_calib              =>    not_act_cal.in
 net   invert-check             pyvcp.probe_calib.disable    <=    not_act_cal.out
-
-
 
 
