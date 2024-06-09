@@ -163,8 +163,9 @@ Open your Probe_postgui.hal or the postgui hal file where you added the content 
 lines:
 
 ```
-net   probe-raw       dbounce_probe.in      <=    #PHYSICAL_PROBE_PIN
-net   probe-signal    dbounce_probe.out     =>    motion.probe-input pyvcp.probe_led
+net   probe-raw                dbounce_probe.in             <=    #PHYSICAL_PROBE_PIN
+net   probe-switch             dbounce_probe.out            =>    xor_probe.in1
+net   probe-signal             xor_probe.out                =>    motion.probe-input pyvcp.probe_led
 ```
 
 #PHYSICAL_PROBE_PIN must be exchanged to the physical pin of your interface card where your probe tool is connected to. In 
