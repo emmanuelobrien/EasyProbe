@@ -13,7 +13,7 @@ The "manuals" folder is optional and not required to run the panel:
 ```
 /macros
 /manuals
-easyicons.ttf
+easyprobe.ttf
 Probe_panel.xml
 Probe_postgui.hal
 Probe_preload.hal
@@ -25,18 +25,18 @@ Copy /nc_files/M130 to your nc_files folder and open a terminal to make the file
 chmod +x ~/linuxcnc/nc_files/M130
 ```
 
-Open a terminal, create a fonts folder (if not already present), copy easyicons.ttf to this folder and rebuild the fonts cache. Change CONFIG_NAME to whatever your configuration folder is named:
+Open a terminal, create a fonts folder (if not already present), copy easyprobe.ttf to this folder and rebuild the fonts cache. Change CONFIG_NAME to whatever your configuration folder is named:
 
 ```
 mkdir -p ~/.local/share/fonts
-cp ~/linuxcnc/configs/CONFIG_NAME/easyicons.ttf ~/.local/share/fonts/
+cp ~/linuxcnc/configs/CONFIG_NAME/easyprobe.ttf ~/.local/share/fonts/
 fc-cache -f -v
 ```
 
-If you want to make sure, that easyicons.ttf is properly installed, use the following command:
+If you want to make sure, that easyprobe.ttf is properly installed, use the following command:
 
 ```
-fc-list | grep "easyicons"
+fc-list | grep "easyprobe"
 ```
 
 ### 2) Edit your INI

@@ -1,0 +1,138 @@
+{
+  "fontname": "easyprobe",
+  "familyname": "easyprobe",
+  "fullname": "easyprobe",
+  "em": 1024,
+  "ascent": 960,
+  "descent": 64,
+  "weight": "Book",
+  "version": "2.0",
+  "glyphs": [
+    {
+      "name": "uni0000",
+      "unicode": 0,
+      "file": "u0000.svg",
+      "width": 0,
+      "left_side_bearing": 0.0
+    },
+    {
+      "name": "uni0001",
+      "unicode": 1,
+      "file": "u0001.svg",
+      "width": 0,
+      "left_side_bearing": 0.0
+    },
+    {
+      "name": "space",
+      "unicode": 32,
+      "file": "u0020.svg",
+      "width": 512,
+      "left_side_bearing": 0.0
+    },
+    {
+      "name": "zero",
+      "unicode": 48,
+      "file": "u0030.svg",
+      "width": 3072,
+      "left_side_bearing": 716.7096774193549
+    },
+    {
+      "name": "one",
+      "unicode": 49,
+      "file": "u0031.svg",
+      "width": 3072,
+      "left_side_bearing": 719.7142857142857
+    },
+    {
+      "name": "two",
+      "unicode": 50,
+      "file": "u0032.svg",
+      "width": 3072,
+      "left_side_bearing": 716.875
+    },
+    {
+      "name": "three",
+      "unicode": 51,
+      "file": "u0033.svg",
+      "width": 3072,
+      "left_side_bearing": 720.0
+    },
+    {
+      "name": "four",
+      "unicode": 52,
+      "file": "u0034.svg",
+      "width": 3072,
+      "left_side_bearing": 1060.0
+    },
+    {
+      "name": "A",
+      "unicode": 65,
+      "file": "u0041.svg",
+      "width": 1024,
+      "left_side_bearing": 0.0
+    },
+    {
+      "name": "B",
+      "unicode": 66,
+      "file": "u0042.svg",
+      "width": 1024,
+      "left_side_bearing": 262.44444444444446
+    },
+    {
+      "name": "E",
+      "unicode": 69,
+      "file": "u0045.svg",
+      "width": 1024,
+      "left_side_bearing": 24.0
+    },
+    {
+      "name": "F",
+      "unicode": 70,
+      "file": "u0046.svg",
+      "width": 1024,
+      "left_side_bearing": 224.0
+    },
+    {
+      "name": "G",
+      "unicode": 71,
+      "file": "u0047.svg",
+      "width": 1024,
+      "left_side_bearing": 42.0
+    },
+    {
+      "name": "H",
+      "unicode": 72,
+      "file": "u0048.svg",
+      "width": 1024,
+      "left_side_bearing": 223.8
+    },
+    {
+      "name": "J",
+      "unicode": 74,
+      "file": "u004a.svg",
+      "width": 1024,
+      "left_side_bearing": 170.0
+    },
+    {
+      "name": "L",
+      "unicode": 76,
+      "file": "u004c.svg",
+      "width": 1024,
+      "left_side_bearing": 262.44444444444446
+    },
+    {
+      "name": "N",
+      "unicode": 78,
+      "file": "u004e.svg",
+      "width": 1024,
+      "left_side_bearing": 261.0
+    },
+    {
+      "name": "O",
+      "unicode": 79,
+      "file": "u004f.svg",
+      "width": 1024,
+      "left_side_bearing": 40.0
+    }
+  ]
+}
